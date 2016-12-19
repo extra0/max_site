@@ -1,0 +1,131 @@
+.header {
+	background: url(../img/main-bg.jpg) 0 0 no-repeat;
+	background-size: cover;
+	padding: 23px 0 0 0;
+	position: relative;
+	overflow: hidden;
+	&__video {
+		@include position(absolute, 0 0 0 0);
+		height: 100%;
+		width: 100%;
+		z-index: 0;
+		&:before {
+			content: '';
+			@include position(absolute, 0 0 0 0);
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background: rgba(32, 44, 64, 0.69);
+		}
+		video {
+			height: 100%;
+			width: 100%;
+			@include transform(scale(1.2));
+		}
+	}
+	&__menu {
+		&-block {
+			text-align: center;
+			margin-top: 21px;
+		}
+		&-list {
+			list-style-type: none;
+			padding: 0;
+			margin: 0 0 0 35px;
+			display: inline-block;
+		}
+		&-item {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 23px;
+		}
+		&-link {
+			color: #fff;
+			display: inline-block;
+			font-size: 18px;
+			border-bottom: 1px solid rgba(255,255,255, 0.6);
+			@include transition(all 0.2s ease-in-out);
+			&:hover,
+			&:focus {
+				color: #fff;
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+			}
+			&.active {
+				border-bottom: 1px solid transparent;
+			}
+		}
+	}
+	&__info {
+		white-space: nowrap;
+		text-align: right;
+		margin-top: 8px;
+		&-phone {
+			color: #fff;
+			font-size: 20px;
+			margin: 0 0 4px 0px;
+			display: inline-block;
+			&:hover,
+			&:focus {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+		&-trigger {
+			color: #fff;
+			font-weight: 300;
+			display: inline-block;
+			@include transition(all 0.2s ease-in-out);
+			border-bottom: 1px dotted;
+			position: relative;
+			margin-left: 20px;
+			&:last-child {
+				float: right;
+			}
+			&:hover, 
+			&:focus { 
+				color: #fff; 
+				text-decoration: none; 
+				border-bottom: 1px dotted transparent;
+			}
+			&.active {
+				cursor: default;
+				border-bottom: 1px dotted transparent;
+			}
+			&:before {
+				content: '';
+				@include position(absolute, 0 null null -20px);
+				width: 15px;
+				height: 17px;
+			}
+			&--msk {
+				&:before {
+					background: url(../img/msk.png) 0 0 no-repeat;
+				}
+			}
+			&--ods {
+				&:before {
+					background: url(../img/ods.png) 0 0 no-repeat;
+				}
+			}
+			&-block {
+				text-align: left;
+			}
+		}
+	}
+	&__block-text {
+		margin: 245px 0 275px 0;
+	}
+	&__title {
+		font-size: 100px;
+		font-weight: bold;
+		color: #fff;
+		margin: 0;
+		line-height: 127px;
+	}
+	&__text {
+		color: #fff;
+		font-size: 33px;
+		font-weight: 300;
+	}
+}

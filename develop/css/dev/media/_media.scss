@@ -11,5 +11,15 @@
 	
 }
 @media (min-width: 1200px) {
-	
+	.container {
+		width: 1190px;
+		padding: 0 10px;
+	}
+	.header {
+		&__logo {
+			img {
+				max-width: none;
+			}
+		}
+	}
 }
