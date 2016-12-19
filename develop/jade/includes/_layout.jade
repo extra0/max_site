@@ -1,0 +1,23 @@
+doctype html
+include _vars
+html(lang="ru")
+	include _head
+	body
+		.main-wrapper
+			// шапка 
+			include _header
+			// конец шапка
+			// контент
+			.content
+				block content
+			.buffer
+			// конец контент
+		// футер
+		include _footer
+		// конец футер
+		// модальные окна
+		include _modals
+		// конец модальные окна
+		// подключаемые скрипты
+		include _script
+		// конец подключаемые скрипты
