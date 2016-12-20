@@ -4,4 +4,97 @@ block append head
 	meta(name="keywords" content="")
 	title Главная страница
 block content
-	
+	// блок опыта работы
+	.experience
+		.container
+			.experience__section
+				p.experience__title
+					span.experience__title-num 11
+					span.experience__title-text лет<br>опыта
+				.experience__block
+					p.experience__block-title 200+
+					p.experience__block-text успешных<br>проектов
+				.experience__block
+					p.experience__block-title 32
+					p.experience__block-text рекомендации<br>от клиентов
+				.experience__block
+					p.experience__block-title 12
+					p.experience__block-text мастеров<br>своего дела
+	// / блок опыта работы
+	// портфолио
+	.portfolio
+		.container
+			.portfolio__section
+				.page-title__block
+					p.page-title__block-title Работы
+					p.page-title__block-subtitle Портфолио
+				.portfolio__block
+					.portfolio__block-inner
+						.portfolio__block-inner-element-holder(style="bottom: 0; left: 20px;")
+							img.portfolio__block-inner-element.right-to-left(src="img/portfolio/index-starbody/el-4.png", alt="stabody-element")
+						.portfolio__block-inner-element-holder(style="bottom:-25px;left:-35px;")
+							img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-starbody/el-1.png", alt="stabody-element")
+						.portfolio__block-inner-element-holder(style="right: 20px; bottom: 0;")
+							img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-starbody/el-3.png", alt="stabody-element" )
+						.portfolio__block-inner-element-holder(style="bottom: -35px; right: -45px;")
+							img.portfolio__block-inner-element.right-to-left(src="img/portfolio/index-starbody/el-2.png", alt="stabody-element")
+					a.portfolio__block-link(href="#!") Онлайн-школа фитнеса «StarBody»
+					p.portfolio__block-description Промо-сайт и закрытый портал с системой многоуровневого доступа для клиентов и сотрудников.
+				.portfolio__block.portfolio__block--second
+					.portfolio__block-inner(style="background: url(img/portfolio/index-everglass/everglass-bg.jpg); 0 0 no-repeat;")
+						.portfolio__block-inner-element-holder(style="bottom: 35px; left: 30px;")
+							img.portfolio__block-inner-element.right-to-left(src="img/portfolio/index-everglass/el-1.png", alt="everglass-element")
+						.portfolio__block-inner-element-holder(style="bottom:-25px;left:-75px;")
+							img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-everglass/el-2.png", alt="everglass-element")
+					a.portfolio__block-link(href="#!") Корпоративный сайт автохимии «Everglass»
+					p.portfolio__block-description Корпоративный сайт с каталогом продукции, уникальными страницами и интернет-магазином.
+				.portfolio__block.portfolio__block--third
+					.portfolio__block-inner
+						.portfolio__block-inner-element-holder(style="bottom: 0; left: -50px;")
+							img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-status/el-1.png", alt="status-element")
+						.portfolio__block-inner-element-holder(style="bottom:-10px;right:-60px;")
+							img.portfolio__block-inner-element.right-to-left(src="img/portfolio/index-status/el-2.png", alt="status-element")
+						.portfolio__block-inner-element-holder(style="bottom:-25px;right:-65px;")
+							img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-status/el-3.png", alt="status-element")
+					a.portfolio__block-link(href="#!") Интернет-магазин офисной мебели «Статус Групп»
+					p.portfolio__block-description Интернет-магазин со сложным каталогом, фильтрами, связанными товарами, корзиной и оплатой.
+				.portfolio__block-more
+					| Хотите увидеть больше
+					br
+					a(href="#!") наших работ?
+	// / портфолио
+	// преимущества
+	.advantages
+		.container
+			.page-title__block
+				p.page-title__block-title Плюсы
+				p.page-title__block-subtitle Преимущества
+			.row
+				.col-sm-4
+					.advantages__block
+						p.advantages__block-num 1.
+						p.advantages__block-title Огромный опыт
+						p.advantages__block-text Мы работаем в сфере IT уже более 11 лет. Это правда очень много.
+				.col-sm-4
+					.advantages__block
+						p.advantages__block-num 2.
+						p.advantages__block-title Уникальный подход
+						p.advantages__block-text В то время как другие массово используют шаблонные решения — мы действтиельно вникаем в суть проекта и предлагаем крутые решения.
+				.col-sm-4
+					.advantages__block
+						p.advantages__block-num 3.
+						p.advantages__block-title Адекватные цены
+						p.advantages__block-text Мы знаем по каким ценам работают наши конкуренты. Регулярно анализируем рынок. Стараемся не загибать ценник.
+			.row
+				.col-sm-4.col-sm-offset-8
+					.advantages__block
+						p.advantages__block-num 4.
+						p.advantages__block-title Железные гарантии
+						p.advantages__block-text Если мы беремся за проект, то гарантируем, что клиент будет доволен результатом. А еще мы платим неустойку, если сроки сорваны.
+			.row
+				.col-sm-4.col-sm-offset-4
+					.advantages__block
+						p.advantages__block-num 5.
+						p.advantages__block-title И вобще
+						p.advantages__block-text Мы действтиельно хорошо делаем свое дело и ответственно подходим к каждому из этапов разработки.
+	// / преимущества 

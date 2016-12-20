@@ -20,7 +20,7 @@
 		video {
 			height: 100%;
 			width: 100%;
-			@include transform(scale(1.2));
+			@include transform(scale(1.3));
 		}
 	}
 	&__menu {
@@ -126,6 +126,7 @@
 	&__text {
 		color: #fff;
 		font-size: 33px;
+		margin: 40px 0 0 0;
 		font-weight: 300;
 	}
 }

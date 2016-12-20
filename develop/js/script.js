@@ -37,6 +37,31 @@ $(function(){
 	}
 
 
+	// собираем проекты 
+	function elDuilding() {
+		$('.portfolio__block').each(function(){
+			var m_height = $(this).offset().top - $(window).scrollTop() - $(window).height() + 300,
+				e_offset = 100,
+				range = 0;
+			if (m_height <= 50 && m_height >= -240) {
+				range = m_height / 13 + 30;
+			} else if (m_height > 50) {
+				range = 60;
+			} else if (m_height < -240) {
+				range = 0;
+			}
+
+			$(this).find('.right-to-left').css('transform', 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, '+ (range)  +', 0, 0, 1)');
+			$(this).find('.left-to-right').css('transform', 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, '+ (-range)  +', 0, 0, 1)');
+		});
+	}
+
+	elDuilding();
+
+	$(window).on('scroll load resize', function(){
+		elDuilding();
+	});
+	
 
 
 
