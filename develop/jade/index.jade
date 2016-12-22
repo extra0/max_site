@@ -29,33 +29,36 @@ block content
 					p.page-title__block-title Работы
 					p.page-title__block-subtitle Портфолио
 				.portfolio__block
-					.portfolio__block-inner
-						.portfolio__block-inner-element-holder(style="bottom: 0; left: 20px;")
-							img.portfolio__block-inner-element.right-to-left(src="img/portfolio/index-starbody/el-4.png", alt="stabody-element")
-						.portfolio__block-inner-element-holder(style="bottom:-25px;left:-35px;")
-							img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-starbody/el-1.png", alt="stabody-element")
-						.portfolio__block-inner-element-holder(style="right: 20px; bottom: 0;")
-							img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-starbody/el-3.png", alt="stabody-element" )
-						.portfolio__block-inner-element-holder(style="bottom: -35px; right: -45px;")
-							img.portfolio__block-inner-element.right-to-left(src="img/portfolio/index-starbody/el-2.png", alt="stabody-element")
+					a(href="#!")
+						.portfolio__block-inner
+							.portfolio__block-inner-element-holder(style="bottom: 0; left: 20px;")
+								img.portfolio__block-inner-element.right-to-left(src="img/portfolio/index-starbody/el-4.png", alt="stabody-element")
+							.portfolio__block-inner-element-holder(style="bottom:-25px;left:-35px;")
+								img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-starbody/el-1.png", alt="stabody-element")
+							.portfolio__block-inner-element-holder(style="right: 20px; bottom: 0;")
+								img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-starbody/el-3.png", alt="stabody-element" )
+							.portfolio__block-inner-element-holder(style="bottom: -35px; right: -45px;")
+								img.portfolio__block-inner-element.right-to-left(src="img/portfolio/index-starbody/el-2.png", alt="stabody-element")
 					a.portfolio__block-link(href="#!") Онлайн-школа фитнеса «StarBody»
 					p.portfolio__block-description Промо-сайт и закрытый портал с системой многоуровневого доступа для клиентов и сотрудников.
 				.portfolio__block.portfolio__block--second
-					.portfolio__block-inner(style="background: url(img/portfolio/index-everglass/everglass-bg.jpg); 0 0 no-repeat;")
-						.portfolio__block-inner-element-holder(style="bottom: 35px; left: 30px;")
-							img.portfolio__block-inner-element.right-to-left(src="img/portfolio/index-everglass/el-1.png", alt="everglass-element")
-						.portfolio__block-inner-element-holder(style="bottom:-25px;left:-75px;")
-							img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-everglass/el-2.png", alt="everglass-element")
+					a(href="#!")
+						.portfolio__block-inner(style="background: url(img/portfolio/index-everglass/everglass-bg.jpg); 0 0 no-repeat;")
+							.portfolio__block-inner-element-holder(style="bottom: 35px; left: 30px;")
+								img.portfolio__block-inner-element.right-to-left(src="img/portfolio/index-everglass/el-1.png", alt="everglass-element")
+							.portfolio__block-inner-element-holder(style="bottom:-25px;left:-75px;")
+								img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-everglass/el-2.png", alt="everglass-element")
 					a.portfolio__block-link(href="#!") Корпоративный сайт автохимии «Everglass»
 					p.portfolio__block-description Корпоративный сайт с каталогом продукции, уникальными страницами и интернет-магазином.
 				.portfolio__block.portfolio__block--third
-					.portfolio__block-inner
-						.portfolio__block-inner-element-holder(style="bottom: 0; left: -50px;")
-							img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-status/el-1.png", alt="status-element")
-						.portfolio__block-inner-element-holder(style="bottom:-10px;right:-60px;")
-							img.portfolio__block-inner-element.right-to-left(src="img/portfolio/index-status/el-2.png", alt="status-element")
-						.portfolio__block-inner-element-holder(style="bottom:-25px;right:-65px;")
-							img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-status/el-3.png", alt="status-element")
+					a(href="#!")
+						.portfolio__block-inner
+							.portfolio__block-inner-element-holder(style="bottom: 0; left: -50px;")
+								img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-status/el-1.png", alt="status-element")
+							.portfolio__block-inner-element-holder(style="bottom:-10px;right:-60px;")
+								img.portfolio__block-inner-element.right-to-left(src="img/portfolio/index-status/el-2.png", alt="status-element")
+							.portfolio__block-inner-element-holder(style="bottom:-25px;right:-65px;")
+								img.portfolio__block-inner-element.left-to-right(src="img/portfolio/index-status/el-3.png", alt="status-element")
 					a.portfolio__block-link(href="#!") Интернет-магазин офисной мебели «Статус Групп»
 					p.portfolio__block-description Интернет-магазин со сложным каталогом, фильтрами, связанными товарами, корзиной и оплатой.
 				.portfolio__block-more
@@ -65,6 +68,11 @@ block content
 	// / портфолио
 	// преимущества
 	.advantages
+		// элементы декора
+		.advantages__el.advantages__el--flower
+		.advantages__el.advantages__el--cup
+		.advantages__el.advantages__el--sharpener
+		// / элементы декора
 		.container
 			.page-title__block
 				p.page-title__block-title Плюсы
@@ -75,6 +83,7 @@ block content
 						p.advantages__block-num 1.
 						p.advantages__block-title Огромный опыт
 						p.advantages__block-text Мы работаем в сфере IT уже более 11 лет. Это правда очень много.
+						.advantages__el.advantages__el--pencil
 				.col-sm-4
 					.advantages__block
 						p.advantages__block-num 2.
@@ -91,10 +100,42 @@ block content
 						p.advantages__block-num 4.
 						p.advantages__block-title Железные гарантии
 						p.advantages__block-text Если мы беремся за проект, то гарантируем, что клиент будет доволен результатом. А еще мы платим неустойку, если сроки сорваны.
+						.advantages__el.advantages__el--iphone
 			.row
 				.col-sm-4.col-sm-offset-4
-					.advantages__block
+					.advantages__block.m-t
 						p.advantages__block-num 5.
 						p.advantages__block-title И вобще
 						p.advantages__block-text Мы действтиельно хорошо делаем свое дело и ответственно подходим к каждому из этапов разработки.
-	// / преимущества 
+	// / преимущества
+	// рекомендации
+	.recommendations
+		.container
+			.page-title__block
+				p.page-title__block-title.font-sm Рекомендации
+				p.page-title__block-subtitle Нам доверяют
+			br
+			.row
+				.col-sm-5
+					.recommendations__img-holder
+						a.js-fancybox(href="img/dev-content/letter-1.jpg")
+							img.recommendations__img(src="img/dev-content/letter-1.jpg", alt="recommendation")
+				.col-sm-7
+					.recommendations__thumb-block
+						- for (i=1;i<=32;i++) {
+							if (i==1)
+								img.recommendations__thumb.active(src="img/dev-content/thumb.jpg", alt="thumb" data-img-src="img/dev-content/letter-#{i%2 ? '1':'2'}.jpg")
+							else
+								img.recommendations__thumb(src="img/dev-content/thumb.jpg", alt="thumb" data-img-src="img/dev-content/letter-#{i%2 ? '1':'2'}.jpg")
+						- }
+						img.recommendations__decor(src="img/guy.png", alt="")
+	// / рекомендации
+	// видео блок
+	.video
+		.container
+			.video__block
+				.video__block-inner
+					a.video__block-play(href="javascript:void(0);")
+						img(src="img/video-poster.jpg", alt="")
+					iframe#video(width="100%" height="600" src="https://www.youtube.com/embed/JPuQVOPOAXA?rel=0&showinfo=0" frameborder="0" allowfullscreen)
+	// / видео блок
