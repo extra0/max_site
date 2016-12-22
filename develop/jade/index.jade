@@ -139,3 +139,47 @@ block content
 						img(src="img/video-poster.jpg", alt="")
 					iframe#video(width="100%" height="600" src="https://www.youtube.com/embed/JPuQVOPOAXA?rel=0&showinfo=0" frameborder="0" allowfullscreen)
 	// / видео блок
+	// информация
+	.prefooter-form
+		.container.js-phone-trigger-parent
+			.page-title__block
+				p.page-title__block-title.font-sm Позвоните нам
+				p.page-title__block-subtitle 
+					strong.js-phone-holder #{mskPhone}
+			// блок смены телефонов
+			.prefooter-form__trigger-phone
+				a.prefooter-form__trigger.prefooter-form__trigger--msk.js-phone-trigger.active(href="#!" data-phone="#{mskPhone}") Москва
+				a.prefooter-form__trigger.prefooter-form__trigger--ods.js-phone-trigger(href="#!" data-phone="#{odsPhone}") Одесса
+			// / блок смены телефонов
+			// инфо
+			.prefooter-form__info
+				a.prefooter-form__info-link.prefooter-form__info-link--skype(href="skype:#{skype}?call") #{skype}
+				a.prefooter-form__info-link.prefooter-form__info-link--email(href="mailto:#{email}") #{email}
+			// / инфо
+			// контент формы
+			.prefooter-form__block
+				.prefooter-form__block-inner
+					form(action="#!")
+						.prefooter-form__block-inner-text
+							| Здравствуйте. Меня зовут
+							input.prefooter-form__block-inner-input(type="text" required)
+							| . Мы подбираем команду для 
+							.prefooter-form__block-inner-select-block
+								span.prefooter-form__block-inner-select-holder(collapse-trigger="dev-list") разработки сайта
+								ul.prefooter-form__block-inner-select#dev-list
+									li.prefooter-form__block-inner-select-item разработки сайта
+									li.prefooter-form__block-inner-select-item разработки приложения
+									li.prefooter-form__block-inner-select-item нечта особенного
+							| . В общих чертах нам нужно
+							input.prefooter-form__block-inner-input(type="text" required)
+							| . Отправьте мне на электронную почту:
+							input.prefooter-form__block-inner-input(type="email" required)
+							| примерную смету и оценку по времени. Мой номер телефона для связи
+							input.prefooter-form__block-inner-input.js-only-number(type="tel" required)
+							input.js-data-develop(type="hidden")
+						button.prefooter-form__block-inner-submit(type="submit") Отправить
+						.prefooter-form__block-inner-description
+							img.prefooter-form__block-inner-description-img.js-time-img(src="img/prefooter-img-1.png", alt="prefooter-img")
+							span.prefooter-form__block-inner-description-text.js-time-text Так как еще утро — ответ будет уже к обеду.
+			// / контент формы
+	// / информация

@@ -22,14 +22,14 @@ header.header
 								a.header__menu-link(href="#!") #{item}
 				// / меню
 			.col-sm-2
-				.header__info
+				.header__info.js-phone-trigger-parent
 					// холдер телефона
-					a.header__info-phone.js-phone-holder(href="tel:+74999122505") +7 (499) 912-25-05
+					a.header__info-phone.js-phone-holder(href="tel:+74999122505") #{mskPhone}
 					// / холдер телефона
 					// блок с триггерами для телефона
 					.header__info-trigger-block
-						a.header__info-trigger.header__info-trigger--msk.js-phone-trigger.active(href="javascript:void(0)" data-phone="+7 (499) 912-25-05") Москва
-						a.header__info-trigger.header__info-trigger--ods.js-phone-trigger(href="javascript:void(0)" data-phone="+38 (050) 912-25-05") Одесса
+						a.header__info-trigger.header__info-trigger--msk.js-phone-trigger.active(href="javascript:void(0)" data-phone="#{mskPhone}") Москва
+						a.header__info-trigger.header__info-trigger--ods.js-phone-trigger(href="javascript:void(0)" data-phone="#{odsPhone}") Одесса
 					// / блок с триггерами для телефона
 		.row
 			.col-sm-12

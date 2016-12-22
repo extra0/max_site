@@ -1,0 +1,46 @@
+.footer {
+	background-color: #f9f9f9;
+	padding: 52px 0;
+	&__copyright {
+		color: #959198;
+		margin: 11px 0 0 0;
+		display: block;
+		font-size: 15px;
+	}
+	&__social {
+		&-block {
+			text-align: center;
+			&-link {
+				display: inline-block;
+				margin: 0 10px;
+				img {
+					border-radius: 50%;
+					display: inline-block;
+					opacity: 1;
+					@include transition(all 0.2s ease-in-out);
+					&:hover {
+						opacity: 0.8;
+						@include transform(rotate(360deg));
+					}
+				}
+			}
+		}
+	}
+	&__block {
+		&-text {
+			font-size: 16px;
+			margin: 0 0 7px;
+		}
+		a {
+			font-size: 16px;
+			color: #2286c6;
+		    border-bottom: 1px solid rgba(34, 134, 198, 0.5);
+			&:hover,
+			&:focus {
+				color: #2286c6;
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+			}
+		}
+	}
+}

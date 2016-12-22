@@ -10,6 +10,13 @@
 @media (min-width: 992px) and (max-width: 1199px) {
 	
 }
+@media (max-width: 1500px) {
+	.advantages {
+		&__el {
+			background-size: 60%!important;
+		}
+	}
+}
 @media (min-width: 1200px) {
 	.container {
 		width: 1190px;

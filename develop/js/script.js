@@ -5,10 +5,19 @@ $(function() {
 
 	// замена телефонов по клику на города в header
 	$('.js-phone-trigger').on('click', function() {
-		$('.js-phone-trigger').removeClass('active');
+		var trigger = $(this).parents('.js-phone-trigger-parent').find('.js-phone-trigger'),
+			holder = $(this).parents('.js-phone-trigger-parent').find('.js-phone-holder'),
+			dataPhone = $(this).attr('data-phone');
+
+		trigger.removeClass('active');
 		$(this).addClass('active');
-		$('.js-phone-holder').html($(this).attr('data-phone'));
-		$('.js-phone-holder').attr('href', 'tel:+' + $(this).attr('data-phone').replace(/[^0-9]/g, "") + '');
+		holder.addClass('blur-in');
+		holder.attr('href', 'tel:+' + dataPhone.replace(/[^0-9]/g, "") + '');
+		setTimeout(function() {
+			holder.html(dataPhone);
+			holder.removeClass('blur-in');
+		}, 200)
+
 	});
 
 
@@ -61,7 +70,7 @@ $(function() {
 
 	// меняем позиции элементов преимуществ при скролле
 	function advElPosition() {
-		$('.advantages__el').each(function() {
+		$('.advantages__el').each(function(i) {
 			var m_height = $(this).offset().top - $(window).scrollTop() - $(window).height() + 300,
 				e_offset = 100,
 				range = 0;
@@ -73,7 +82,10 @@ $(function() {
 				range = -50;
 			}
 
-			$(this).css('transform', 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ' + range + ', 0, 1)');
+			for (k = 0; k <= i; k++) {
+				rand = ((Math.random() * 10) - 5);
+				$(this).css('transform', 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ' + (range + rand) + ', 0, 1)');
+			}
 		});
 	}
 
@@ -87,7 +99,7 @@ $(function() {
 
 	// задаем разные позиции превьюхам картинок рекомендаций
 	$('.recommendations__thumb').each(function(i) {
-		for (k = 1; k <= i; k++) {
+		for (k = 0; k <= i; k++) {
 			rand = ((Math.random() * 15) - 5);
 			$(this).css({
 				'top': rand,
@@ -120,6 +132,47 @@ $(function() {
 		$(this).fadeOut(400);
 		$video.attr('src', src + '&autoplay=1');
 	});
+
+	// collapse 
+	$('[collapse-trigger]').on('click', function() {
+		$('#' + $(this).attr('collapse-trigger') + '').fadeToggle(400);
+	});
+
+	// выбираем нужный нам вариант разработки
+	$('.prefooter-form__block-inner-select-item').on('click', function() {
+		$('.prefooter-form__block-inner-select-holder').html($(this).html());
+		$('.js-data-develop').val($(this).html());
+		$(this).parent().fadeOut(400);
+	});
+
+	// меняем значения ночь/утро/день/вечер
+	var date = new Date(),
+		hours = date.getHours(),
+		timeImg = $('.js-time-img'),
+		timeText = $('.js-time-text');
+
+	$(window).on('load', function() {
+		$('.prefooter-form__block-inner-description').addClass('fadeIn');
+	});
+
+	switch (true) {
+		case (hours > 7 && hours <= 12):
+			timeImg.attr('src', 'img/prefooter-img-1.png');
+			timeText.html('Еще утро, так что ответ будет уже к обеду!');
+			break;
+		case (hours > 12 && hours <= 18):
+			timeImg.attr('src', 'img/prefooter-img-2.png');
+			timeText.html('Сейчас день, ответим в течении пары часов!');
+			break;
+		case (hours > 18 && hours <= 24):
+			timeImg.attr('src', 'img/prefooter-img-3.png');
+			timeText.html('Уже, вечер, так что ответ будет у вас утром!');
+			break;
+		case (hours > 0 && hours <= 7):
+			timeImg.attr('src', 'img/prefooter-img-4.png');
+			timeText.html('Сейчас ночь, но уже в обед вы получите ответ!');
+			break;
+	}
 
 
 });

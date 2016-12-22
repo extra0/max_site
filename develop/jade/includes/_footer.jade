@@ -1,2 +1,18 @@
 footer.footer
 	.container
+		.row
+			.col-sm-3
+				p.footer__copyright &copy; 2005–2016 Студия «Максимус»
+			.col-sm-6
+				.footer__social-block
+					- for (i=1; i<=4; i++) {
+						a.footer__social-block-link(href="#!" target="_blank")
+							img(src="img/icon.png", alt="social icon")
+					- }
+			.col-sm-3
+				.footer__block
+					p.footer__block-text
+						| Случайная 
+						a(href="#!") мысль
+						| :
+					a(href="#!") “О правильном формате ссылок”

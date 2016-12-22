@@ -44,7 +44,6 @@
 			display: inline-block;
 			font-size: 18px;
 			border-bottom: 1px solid rgba(255,255,255, 0.6);
-			@include transition(all 0.2s ease-in-out);
 			&:hover,
 			&:focus {
 				color: #fff;
@@ -65,6 +64,7 @@
 			font-size: 20px;
 			margin: 0 0 4px 0px;
 			display: inline-block;
+			@include transition(all 0.2s ease-in-out);
 			&:hover,
 			&:focus {
 				color: #fff;
@@ -75,7 +75,6 @@
 			color: #fff;
 			font-weight: 300;
 			display: inline-block;
-			@include transition(all 0.2s ease-in-out);
 			border-bottom: 1px dotted;
 			position: relative;
 			margin-left: 20px;
