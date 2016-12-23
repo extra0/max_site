@@ -69,7 +69,7 @@ block content
 	// преимущества
 	.advantages
 		// элементы декора
-		.advantages__el.advantages__el--flower
+		.advantages__el.advantages__el--flower.hidden-sm
 		.advantages__el.advantages__el--cup
 		.advantages__el.advantages__el--sharpener
 		// / элементы декора
@@ -128,7 +128,7 @@ block content
 							else
 								img.recommendations__thumb(src="img/dev-content/thumb.jpg", alt="thumb" data-img-src="img/dev-content/letter-#{i%2 ? '1':'2'}.jpg")
 						- }
-						img.recommendations__decor(src="img/guy.png", alt="")
+					img.recommendations__decor.visible-lg(src="img/guy.png", alt="")
 	// / рекомендации
 	// видео блок
 	.video
@@ -136,15 +136,14 @@ block content
 			.video__block
 				.video__block-inner
 					a.video__block-play(href="javascript:void(0);")
-						img(src="img/video-poster.jpg", alt="")
 					iframe#video(width="100%" height="600" src="https://www.youtube.com/embed/JPuQVOPOAXA?rel=0&showinfo=0" frameborder="0" allowfullscreen)
 	// / видео блок
 	// информация
 	.prefooter-form
 		.container.js-phone-trigger-parent
-			.page-title__block
-				p.page-title__block-title.font-sm Позвоните нам
-				p.page-title__block-subtitle 
+			.prefooter-form__title-block
+				p.prefooter-form__title-block-text Вы в шаге от правильного решения:
+				p.prefooter-form__title-block-title
 					strong.js-phone-holder #{mskPhone}
 			// блок смены телефонов
 			.prefooter-form__trigger-phone

@@ -5,12 +5,193 @@
 
 }
 @media (min-width: 768px) and (max-width: 991px) {
-	
+	.header {
+		&__menu {
+			&-block {
+				display: none;
+			}
+		}
+		&__block {
+			&-text {
+				margin: 85px 0 105px 0;
+			}
+		}
+		&__title {
+			font-size: 59px;
+			line-height: normal;
+		}
+		&__text {
+			font-size: 28px;
+		}
+	}
+	.experience {
+		&__section {
+			@include flex-wrap(wrap);
+			max-width: 620px;
+			margin: 0 auto;
+		}
+	}
+	.portfolio {
+		&__block {
+			margin: 100px auto 80px auto;
+			display: block;
+			&--second {
+				margin: 0 auto 80px auto;
+			}
+			&--third {
+				margin: 0 auto 80px auto;
+			}
+			&-more {
+				margin: 10px 0 50px 170px;
+			}
+		}
+	}
+	.page-title {
+		&__block {
+			margin: 50px 0;
+			&-title {
+				font-size: 130px;
+			}
+		}
+	}
+	.advantages {
+		&__el {
+			background-size: 40% !important;
+			&--sharpener {
+				left: -40px;
+			}
+			&--iphone {
+				left: -310px;
+				top: 30px;
+			}
+			&--pencil {
+				top: 170px;
+				left: -170px;
+			}
+			&--cup {
+				top: 65%
+			}
+		}
+		&__block {
+			&-num {
+				font-size: 100px;
+			}
+			&-title {
+				font-size: 22px;
+			}
+			&-text {
+				font-size: 16px;
+			}
+			&.m-t {
+				margin-top: -200px;
+			}
+		}
+	}
+	#video {
+		height: 350px;
+	}
+	.prefooter-form {
+		&__title {
+			&-block {
+				&-title {
+					font-size: 70px;
+				}
+			}
+		}
+		&__block {
+			&-inner {
+				padding: 50px 30px 50px 40px;
+				&-text {
+					font-size: 20px;
+				    line-height: 30px;
+				}
+				&-select {
+					top: 40px;
+					left: -50px;
+					&-item {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		padding: 42px 0 22px 0;
+		&__block {
+			text-align: right;
+		}
+		&__social {
+			&-block {
+				&-link {
+					margin: 0 10px 10px 10px;
+				}
+			}
+		}
+	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-	
+	.header {
+		&__menu {
+			&-item {
+				margin: 0 13px;
+			}
+			&-list {
+				margin: 0 -60px 0 -40px;
+			}
+		}
+		&__title {
+			font-size: 70px;
+			line-height: 80px;
+		}
+		&__block {
+			&-text {
+				margin: 125px 0 175px 0;
+			}
+		}
+	}
+	.experience {
+		&__block {
+			width: 190px;
+			padding: 9px 27px 26px 17px;
+			&-title {
+				font-size: 70px;
+			}
+		}
+	}
+	.portfolio {
+		&__section {
+			padding: 0;
+		}
+		&__block {
+			&--second {
+				margin: 280px 0 0 54px;
+			}
+			&-more {
+				margin: 230px 0 0 110px;
+			}
+		}
+	}
+	.recommendations {
+		&__thumb {
+			&-block {
+				max-width: none;
+			}
+		}
+	}
+	#video {
+		height: 568px;
+	}
+	.prefooter-form {
+		&__title {
+			&-block {
+				&-title {
+					font-size: 90px;
+				}
+			}
+		}
+	}
 }
-@media (max-width: 1500px) {
+@media (min-width:992px) and (max-width: 1500px) {
 	.advantages {
 		&__el {
 			background-size: 60%!important;

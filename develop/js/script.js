@@ -83,8 +83,9 @@ $(function() {
 			}
 
 			for (k = 0; k <= i; k++) {
-				rand = ((Math.random() * 10) - 5);
-				$(this).css('transform', 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ' + (range + rand) + ', 0, 1)');
+				rand = ((Math.random() * 10) - 20);
+				rand2 = ((Math.random() * 20));
+				$(this).css('transform', 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ' + (range + rand - rand2) + ', 0, 1)');
 			}
 		});
 	}
@@ -156,19 +157,19 @@ $(function() {
 	});
 
 	switch (true) {
-		case (hours > 7 && hours <= 12):
+		case (hours >= 7 && hours < 12):
 			timeImg.attr('src', 'img/prefooter-img-1.png');
 			timeText.html('Еще утро, так что ответ будет уже к обеду!');
 			break;
-		case (hours > 12 && hours <= 18):
+		case (hours >= 12 && hours < 18):
 			timeImg.attr('src', 'img/prefooter-img-2.png');
 			timeText.html('Сейчас день, ответим в течении пары часов!');
 			break;
-		case (hours > 18 && hours <= 24):
+		case (hours >= 18 && hours < 24):
 			timeImg.attr('src', 'img/prefooter-img-3.png');
 			timeText.html('Уже, вечер, так что ответ будет у вас утром!');
 			break;
-		case (hours > 0 && hours <= 7):
+		case (hours >= 0 && hours < 7):
 			timeImg.attr('src', 'img/prefooter-img-4.png');
 			timeText.html('Сейчас ночь, но уже в обед вы получите ответ!');
 			break;

@@ -177,6 +177,7 @@
 	&__el {
 		@include position(absolute, null null null null);
 		@include transition(all 0.2s ease-in-out);
+		z-index: 10;
 		&--flower {
 			background: url(../img/flower.png) top right no-repeat;
 			width: 345px;
@@ -233,7 +234,7 @@
 			@include transition(all 0.2s ease-in-out);
 			&.fadeOut {
 				opacity: 0;
-				@include transform(translateY(-150px) scale(0.6));
+				@include transform(translateX(-100px));
 			}
 		}
 	}
@@ -251,15 +252,13 @@
 			border: 2px solid #ee505d;
 		}
 		&-block {
-			
+			max-width: 500px;	
 		}
 	}
 	&__decor {
-		// z-index: 10;
-		float: right;
-		margin: -100px 0 -20px;
-		position: relative;
-		// @include position(absolute, null 0 -20px null);
+		position: absolute;
+		bottom: -102px;
+		right: 0;
 	}
 }
 .video {
@@ -277,6 +276,8 @@
 		}
 		&-play {
 			@include position(absolute, 0 0 0 0);
+			background: url(../img/video-poster.jpg) center center no-repeat;
+			background-size: cover;
 			&:before {
 				content: '';
 				@include position(absolute, 0 0 0 0);
@@ -382,7 +383,7 @@
 		padding: 10px 10px 0 10px;
 		background: url(../img/prefooter-form-bg.png);
 		&-inner {
-			background-color: #fff;
+			background-color: #eaf7f9;
 			padding: 70px 50px 70px 60px;
 			&-text {
 				font-size: 25px;
@@ -394,7 +395,11 @@
 			&-input {
 				background: none;
 				border: none;
+				font-weight: 500;
 				border-bottom: 1px solid #000;
+				&[type='email'] {
+					width: 28%;
+				}
 			}
 			&-select {
 				list-style-type: none;
@@ -493,6 +498,23 @@
 					line-height: 20px;
 				}
 			}
+		}
+	}
+	&__title-block {
+		text-align: center;
+		&-text {
+			color: #575757;
+			font-size: 28px;
+			margin: 50px 0;
+			font-family: $pts;
+		}
+		&-title {
+			color: #171a23;
+		    font-size: 110px;
+		    font-weight: bold;
+		    line-height: 60px;
+		    margin: 0;
+		    font-family: $pts;
 		}
 	}
 }
