@@ -1,19 +1,19 @@
 header.header
 	// видео блок
-	.header__video
-		video.slider__list-video-player(loop autoplay muted poster="img/main-bg.jpg")
+	.header__video.hidden-xs
+		video(loop autoplay muted poster="img/main-bg.jpg")
 			source(src="video/video2.mp4" type="video/mp4")
 			source(src="video/video2.webm" type="video/webm")
 			source(src="video/video2.ogg" type="video/ogg")
 	// / видео блок
 	.container
 		.row
-			.col-lg-2.col-md-3.col-sm-4
+			.col-lg-2.col-md-3.col-sm-4.col-xs-5
 				// лого
 				a.header__logo(href="/")
 					img(src="img/logo.png" alt="Site Logo")
 				// / лого
-			.col-lg-8.col-md-6.col-sm-4
+			.col-lg-8.col-md-6.col-sm-4.col-xs-2
 				// меню
 				button.header__menu-btn.visible-sm.visible-xs
 				.header__menu-block
@@ -22,7 +22,7 @@ header.header
 							li.header__menu-item
 								a.header__menu-link(href="#!") #{item}
 				// / меню
-			.col-lg-2.col-md-3.col-sm-4
+			.col-lg-2.col-md-3.col-sm-4.col-xs-5
 				.header__info.js-phone-trigger-parent
 					// холдер телефона
 					a.header__info-phone.js-phone-holder(href="tel:+74999122505") #{mskPhone}

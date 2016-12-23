@@ -1,5 +1,179 @@
 @media (max-width: 767px) {
-	
+	.header {
+		&__menu {
+			&-block {
+				display: none;
+			}
+		}
+		&__title {
+			font-size: 40px;
+			line-height: normal;
+		}
+		&__text {
+			font-size: 20px;
+		}
+		&__block {
+			&-text {
+				margin: 67px auto 125px auto;
+				max-width: 480px;
+			}
+		}
+	}
+	.experience {
+		&__section {
+			@include flex-wrap(wrap);
+			@include justify-content(center);
+			padding: 30px 0 42px 0;
+		}
+		&__title {
+			margin: 0;
+			&-num {
+				font-size: 220px;
+			}
+			&-text {
+				margin: 36px 0 0 30px;
+			}
+		}
+	}
+	.page-title {
+		&__block {
+			margin: 44px 0 70px 0;
+			&-title {
+				font-size: 90px;
+				&.font-sm {
+					font-size: 65px;
+				}
+			}
+			&-subtitle {
+				font-size: 60px;
+			}
+		}
+	}
+	.portfolio {
+		&__section {
+			padding: 0;
+		}
+		&__block {
+			display: block;
+			margin: 0 auto 60px auto;
+			&--second,
+			&--third {
+				margin: 0 auto 60px auto;
+			}
+			&-more {
+				margin: 0px 0 30px 70px;
+			}
+		}
+	}
+	.advantages {
+		&__el {
+			background-size: 50%!important;
+			&--sharpener {
+				top: 80px;
+				left: -60px;
+			}
+			&--pencil {
+				top: 240px;
+				left: 20px;
+			}
+			&--iphone {
+				top: 300px;
+				left: 0;
+			}
+		}
+		&__block {
+			margin: 0 auto 30px auto;
+			&-num {
+				font-size: 100px;
+			}
+			&.m-t {
+				margin: 0 auto;
+			}
+		}
+	}
+	.recommendations {
+		&__img {
+			&-holder {
+				max-width: 350px;
+				margin: 0 auto 30px auto;
+			}
+		}
+		&__thumb {
+			height: auto;
+			width: 40px;
+			margin: 0 14px 20px 0;
+			&-block {
+				max-width: none;
+				text-align: center;
+			}
+		}
+	}
+	.video__block {
+		max-width: 500px;
+	}
+	#video {
+		height: 300px;
+	}
+	.prefooter-form {
+		&__title {
+			&-block {
+				&-text {
+					font-size: 22px;
+				}
+				&-title {
+					font-size: 42px;
+					line-height: 10px;
+				}
+			}
+		}
+		&__info {
+			margin-bottom: 20px;
+			&-link {
+				margin: 0 45px 20px 85px;
+			}
+		}
+		&__trigger {
+			&-phone {
+				margin: 44px 0 59px;
+			}
+		}
+		&__block {
+			&-inner {
+				padding: 30px 20px 40px 30px;
+				&-text {
+					font-size: 16px;
+					line-height: 31px;
+				}
+				&-input {
+					&[type="emial"] {
+						width: auto;
+					}
+				}
+				&-select {
+					top: 37px;
+					left: -50px;
+					padding: 10px 15px;
+					&-item {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		padding: 22px 0;
+		&__copyright {
+			margin: 11px 0 20px 0;
+		}
+		&__social {
+			&-block {
+				margin-bottom: 20px;
+			}
+		}
+		&__block {
+			float: none;
+		}
+	}
 }
 @media (max-width: 499px) {
 
