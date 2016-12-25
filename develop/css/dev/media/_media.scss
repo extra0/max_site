@@ -1,10 +1,5 @@
 @media (max-width: 767px) {
 	.header {
-		&__menu {
-			&-block {
-				display: none;
-			}
-		}
 		&__title {
 			font-size: 40px;
 			line-height: normal;
@@ -176,13 +171,117 @@
 	}
 }
 @media (max-width: 499px) {
-
+	.header {
+		&__info {
+			float: none;
+			margin: 0 auto;
+			display: none;
+		}
+		&__title {
+			font-size: 25px;
+		}
+		&__block {
+			&-text {
+				max-width: 300px;
+			}
+		}
+	}
+	.page-title {
+		&__block {
+			&-title {
+				font-size: 70px;
+			}
+			&-subtitle {
+				font-size: 40px;
+			}
+		}
+	}
+	.advantages {
+		&__el {
+			display: none;
+		}
+	}
+	#video {
+		height: 250px;
+	}
+	.prefooter-form {
+		&__title {
+			&-block {
+				&-title {
+					font-size: 28px;
+				}
+			}
+		}
+		&__info {
+			&-link {
+				font-size: 21px;
+			}
+		}
+		&__block {
+			&-inner {
+				padding: 20px 10px 20px 20px;
+				&-input {
+					&[type="email"] {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+	.portfolio {
+		&__block {
+			width: 290px;
+			padding: 20px;
+			&-inner {
+				height: 280px;
+				&-element {
+					max-width: 77%;
+				}
+			}
+			&-description {
+				font-size: 16px;
+				line-height: 23px;
+			}
+			&-link {
+				font-size: 20px;
+			}
+			&-more {
+				margin: 0;
+				text-align: center;
+				font-size: 24px;
+				display: block;
+			}
+		}
+	}
+	.page-title {
+		&__block {
+			margin: 44px 0 30px 0;
+			&-title {
+				&.font-sm {
+					font-size: 42px;
+				}
+			}
+		}
+	}
+	.advantages {
+		&__block {
+			&-num {
+				font-size: 80px;
+			}
+			&-title {
+				font-size: 24px;
+			}
+			&-text {
+				font-size: 18px;
+			}
+		}
+	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
 	.header {
-		&__menu {
-			&-block {
-				display: none;
+		&__video {
+			video {
+				@include transform(scale(1.5));
 			}
 		}
 		&__block {
@@ -369,6 +468,41 @@
 	.advantages {
 		&__el {
 			background-size: 60%!important;
+		}
+	}
+}
+@media (max-width: 992px) {
+	.header {
+		&__menu {
+			&-block {
+				position: fixed;
+				top: 0;
+				right: 0;
+				background: #fff;
+				z-index: 100;
+				margin: 0;
+				height: 100%;
+				text-align: left;
+				border-left: 1px solid #ddd;
+				@include transition(all 0.2s ease-in-out);
+				@include transform(translateX(100%));
+				&.active {
+					@include transform(translateX(0));
+				}
+			}
+			&-list {
+				padding: 50px 0px 0 0px;
+				margin: 0;
+			}
+			&-item {
+				display: block;
+				margin: 0 23px 10px 23px;
+			}
+			&-link {
+				color: #000;
+				font-size: 20px;
+				font-weight: bold;
+			}
 		}
 	}
 }

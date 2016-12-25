@@ -382,6 +382,7 @@
 		border-radius: 3px 3px 0px 0px;
 		padding: 10px 10px 0 10px;
 		background: url(../img/prefooter-form-bg.png);
+		background-size: cover;
 		&-inner {
 			background-color: #eaf7f9;
 			padding: 70px 50px 70px 60px;
@@ -460,13 +461,12 @@
 				color: #fff;
 				text-transform: uppercase;
 				font-size: 16px;
-				background-color: #ebd911;
-				background-image: linear-gradient(75deg, #f23435 0%, #f23338 100%);
+				background-color: #f23435;
 				border-radius: 2px;
 				opacity: 1;
 				@include transition(all 0.2s ease-in-out);
 				&:hover {
-					opacity: 0.9;
+					background-color: darken( #f23435, 10%);
 				}
 			}
 			&-description {

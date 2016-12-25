@@ -54,6 +54,57 @@
 				border-bottom: 1px solid transparent;
 			}
 		}
+		&-btn {
+			&-close {
+				@include position(absolute, 10px 10px null null);
+				background: none;
+				border: none;
+				width: 36px;
+				height: 36px;
+				&:before,
+				&:after {
+					content: '';
+					@include position(absolute, null null 17px 0);
+					width: 100%;
+					height: 2px;
+					background-color: #000;
+					@include transform(rotate(45deg));
+				}
+				&:after {
+					@include transform(rotate(-45deg));
+				}
+			}
+			&-open {
+				width: 40px;
+				height: 24px;
+				background: none;
+				border: none;
+				float: right;
+				position: relative;
+				margin: 23px 0 0 30px;
+				span {
+					@include position(absolute,10px null null 0);
+					width: 100%;
+					height: 3px;
+					background: #fff;
+					border-radius: 3px;
+				}
+				&:after,
+				&:before {
+					content: '';
+					@include position(absolute, 0 null null 0);
+					width: 100%;
+					background: #fff;
+					height: 3px;
+					border-radius: 3px;
+
+				}
+				&:after {
+					top: auto;
+					bottom: 0;
+				}
+			}
+		}
 	}
 	&__info {
 		white-space: nowrap;

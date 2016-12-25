@@ -17,7 +17,15 @@ $(function() {
 			holder.html(dataPhone);
 			holder.removeClass('blur-in');
 		}, 200)
+	});
 
+	// открываем моб меню
+	$('.header__menu-btn-open').on('click', function() {
+		$('.header__menu-block').addClass('active');
+	});
+
+	$('.header__menu-btn-close').on('click', function() {
+		$('.header__menu-block').removeClass('active');
 	});
 
 
@@ -174,6 +182,16 @@ $(function() {
 			timeText.html('Сейчас ночь, но уже в обед вы получите ответ!');
 			break;
 	}
+
+	// открываем языковую панель
+	var currentLang = $('.prefooter-form__block-inner-select-holder'),
+		langList = $('.prefooter-form__block-inner-select');
+
+	$(document).mouseup(function(e) {
+		if (langList.has(e.target).length === 0 && currentLang.has(e.target).length === 0) {
+			langList.fadeOut(400);
+		}
+	});
 
 
 });

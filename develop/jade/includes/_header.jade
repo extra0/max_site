@@ -8,21 +8,25 @@ header.header
 	// / видео блок
 	.container
 		.row
-			.col-lg-2.col-md-3.col-sm-4.col-xs-5
+			.col-lg-2.col-md-3.col-sm-4.col-xs-5.col-xxs-7
 				// лого
 				a.header__logo(href="/")
 					img(src="img/logo.png" alt="Site Logo")
 				// / лого
-			.col-lg-8.col-md-6.col-sm-4.col-xs-2
+			.col-lg-8.col-md-6.sm-hidden.col-xs-0.xxs-text-center
 				// меню
-				button.header__menu-btn.visible-sm.visible-xs
 				.header__menu-block
+					button.header__menu-btn-close.visible-sm.visible-xs
 					ul.header__menu-list
 						each item in menu
 							li.header__menu-item
 								a.header__menu-link(href="#!") #{item}
 				// / меню
-			.col-lg-2.col-md-3.col-sm-4.col-xs-5
+			.col-lg-2.col-md-3.col-sm-8.col-xs-7.col-xxs-5
+				// кнопка показа моб меню
+				button.header__menu-btn-open.visible-sm.visible-xs
+					span
+				// / кнопка показа моб меню
 				.header__info.js-phone-trigger-parent
 					// холдер телефона
 					a.header__info-phone.js-phone-holder(href="tel:+74999122505") #{mskPhone}
